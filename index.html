@@ -3,13 +3,17 @@
   <body
     onmousedown="document.querySelector('#mousedown').innerHTML='mousedown!'"
     onmouseup="document.querySelector('#mouseup').innerHTML='mouseup!'"
+    onclick="document.body.style.background = 'red'"
   >
+  The most inner
   <div id="mousedown">no mousedown</div>
   <div id="mouseup">no mouseup</div>
   <style>
     *, * * {
       padding: 0;
       margin: 0;
+      border: 0;
+      outline: 0;
     }
     
     html, body {
