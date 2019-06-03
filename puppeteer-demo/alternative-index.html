@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <style>
+    *, * * {
+      padding: 0;
+      margin: 0;
+      border: 0;
+      outline: 0;
+      font-size: 12px;
+    }
+  </style>
+  
+  <div style="padding: 20px;">
+    Top level with frames all within one domain
+    <div id="mousedown">no mousedown</div>
+    <div id="mouseup">no mouseup</div>
+  </div>
+  <iframe style="background: white; height: 600px; width: 600px;display: block;" src="hhttps://wwwsevolod.github.io/chrome-bug-show-case/puppeteer-demo/alternative-second.html"></iframe>
+  <script>
+    document.addEventListener('mousedown', (event) => document.querySelector('#mousedown').innerHTML='mousedown ' + event.target.tagName);
+    document.addEventListener('mouseup', () => document.querySelector('#mouseup').innerHTML='mouseup '  + event.target.tagName);
+    document.addEventListener('click', () => document.body.style.background = 'red');
+  </script>
+  
+  </body>
+</html>
